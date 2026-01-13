@@ -1,6 +1,15 @@
-# E-Shop Project
+# 🛒 E-Shop - Full-Stack E-Commerce Project
 
-A simple e-commerce application built with a modern tech stack, featuring a **NestJS** backend API and a **Next.js** frontend.
+A **learning-focused full-stack e-commerce system** built to understand how real-world online shops work end-to-end. This project features a **NestJS** backend API, **Next.js** frontend, and **PostgreSQL** database.
+
+## 📌 Project Goals
+
+- Build a complete e-commerce system with product catalog, cart, orders, and admin panel
+- Learn modern full-stack architecture patterns
+- Understand e-commerce domain concepts and workflows
+- Practice clean code, API design, and database modeling
+
+> 💡 **Note:** See [PROJECT.md](PROJECT.md) for the detailed phased development roadmap and learning objectives.
 
 ## 🏗️ Project Structure
 
@@ -8,29 +17,33 @@ A simple e-commerce application built with a modern tech stack, featuring a **Ne
 e-shop/
 ├── backend/          # NestJS REST API server
 │   └── src/         # Application source code
-└── frontend/        # Next.js web application
-    └── app/         # App router pages and components
+├── frontend/        # Next.js web application
+│   └── app/         # App router pages and components
+├── README.md        # Quick start & overview (this file)
+└── PROJECT.md       # Detailed development roadmap
 ```
 
 ## 🛠️ Technology Stack
 
-### Backend
-- **NestJS** - Progressive Node.js framework for building efficient server-side applications
-- **TypeScript** - Type-safe JavaScript
-- **Express** - Web framework (used by NestJS)
-- **Jest** - Testing framework
-
 ### Frontend
-- **Next.js 16** - React framework with server-side rendering
+- **Next.js 16** (App Router) - React framework with server-side rendering
 - **React 19** - UI library
 - **TypeScript** - Type-safe JavaScript
 - **Tailwind CSS** - Utility-first CSS framework
 
+### Backend
+- **NestJS** - Progressive Node.js framework for building scalable server-side applications
+- **TypeScript** - Type-safe JavaScript
+- **PostgreSQL** - Relational database
+- **Prisma ORM** - Database toolkit and ORM
+- **Jest** - Testing framework
+
 ## 🚀 Getting Started
 
 ### Prerequisites
-- Node.js (v18 or higher recommended)
-- npm or yarn package manager
+- **Node.js** (v18 or higher recommended)
+- **npm** or yarn package manager
+- **PostgreSQL** (for database - will be set up in Phase 1)
 
 ### Installation & Running
 
@@ -51,7 +64,7 @@ npm run build
 npm run start:prod
 ```
 
-The backend API will run on **http://localhost:3000**
+The backend API will run on **http://localhost:4000**
 
 **Available Backend Scripts:**
 - `npm run start:dev` - Start development server with watch mode
@@ -77,7 +90,7 @@ npm run build
 npm run start
 ```
 
-The frontend will run on **http://localhost:3001** (or 3000 if backend isn't running)
+The frontend will run on **http://localhost:3000** (may use 3001 if port 3000 is taken)
 
 **Available Frontend Scripts:**
 - `npm run dev` - Start development server
@@ -105,16 +118,37 @@ npm run dev
 
 ## 📝 Development Notes
 
-- The backend uses NestJS's modular architecture for organizing code
-- The frontend uses Next.js App Router (modern approach with the `app/` directory)
-- Both projects include ESLint for code quality
-- TypeScript is configured for type safety across the entire stack
+- **Phased Development:** The project is built incrementally (see [PROJECT.md](PROJECT.md) for phases)
+- **Backend:** Uses NestJS's modular architecture with layered design (Controller → Service → Repository)
+- **Frontend:** Uses Next.js App Router (modern approach with the `app/` directory)
+- **Database:** PostgreSQL with Prisma ORM for type-safe database access
+- **Code Quality:** ESLint configured in both projects, TypeScript for type safety
 
 ## 🔗 Default Ports
 
 - **Backend:** http://localhost:4000
-- **Frontend:** http://localhost:3000 (may vary based on available ports)
+- **Frontend:** http://localhost:3000
+
+## 🗺️ Development Phases
+
+The project follows a structured learning path:
+
+1. **Phase 0:** Project setup & communication ✅
+2. **Phase 1:** Product catalog (read-only) - *Next*
+3. **Phase 2:** Cart system (anonymous users)
+4. **Phase 3:** Users & orders
+5. **Phase 4:** Admin panel
+6. **Phase 5:** Advanced features (optional)
+
+> 📖 See [PROJECT.md](PROJECT.md) for detailed phase objectives and features.
+
+## 🧠 Guiding Principles
+
+- **One feature at a time** - Stay focused and complete each phase
+- **Make it work first** - Functionality before optimization
+- **Learn by doing** - Understand concepts through implementation
+- **Clean code** - Prefer clarity over cleverness
 
 ---
 
-*This is a starter template. Build your e-commerce features on top of this foundation!*
+*This is a learning project. The goal is understanding, not perfection.*
