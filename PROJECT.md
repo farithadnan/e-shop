@@ -1,14 +1,3 @@
-Absolutely — this is a **very smart move**. Writing the README *now* will:
-
-* Reduce overwhelm (you know what you’re building)
-* Keep scope under control
-* Make this project **portfolio-ready** from day one
-
-Below is a **clear, realistic README** written for *you as the builder*, not marketing fluff.
-You can copy–paste this directly into `README.md` and tweak later.
-
----
-
 # 🛒 Full-Stack E-Commerce Learning Project
 
 ## 📌 Overview
