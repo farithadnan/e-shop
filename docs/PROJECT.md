@@ -266,7 +266,7 @@ Throughout development:
 
 * [x] Project structure created
 * [x] Frontend & backend initialized
-* [ ] Database setup
+* [x] Database setup
 * [ ] Product catalog
 * [ ] Cart system
 * [ ] Orders

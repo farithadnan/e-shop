@@ -45,7 +45,9 @@ npm run dev
 ## 📚 Documentation
 
 - **[Project Roadmap](docs/PROJECT.md)** - Phased development plan, goals, and learning objectives
-- **[Database Setup](docs/DATABASE_SETUP.md)** - Docker, Prisma commands, and database management
+- **[Prisma & PostgreSQL Guide](docs/PRISMA_POSTGRESQL_GUIDE.md)** - Beginner-friendly explanation (START HERE if new to Prisma!)
+- **[Visual Guide](docs/VISUAL_GUIDE.md)** - Diagrams and visual explanations
+- **[Database Setup Reference](docs/DATABASE_SETUP.md)** - Quick command reference
 
 ## 🗺️ Current Status
 

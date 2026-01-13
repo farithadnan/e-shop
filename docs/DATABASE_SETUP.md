@@ -1,10 +1,16 @@
-# Database Setup Guide
+# Database Setup - Quick Reference
+
+> 📚 **New to Prisma & PostgreSQL?** Read the [Beginner's Guide](PRISMA_POSTGRESQL_GUIDE.md) first for detailed explanations!
+
+This is a quick reference for common database commands. For learning how everything works, see the guide above.
+
+---
 
 ## ✅ What's Installed
 
-- **Docker** - Running PostgreSQL 16
-- **Prisma** - ORM for database access
-- **PostgreSQL** - Database running in Docker container
+- **Docker** - Runs PostgreSQL in a container (no system installation needed)
+- **Prisma** - ORM tool that translates TypeScript ↔ SQL
+- **PostgreSQL** - The actual database where data is stored
 
 ## 🐳 Docker Commands
 
@@ -46,6 +52,9 @@ npx prisma migrate dev --name <migration_name>
 # Apply migrations in production
 npx prisma migrate deploy
 
+# Seed the database with sample data
+npm run seed
+
 # Open Prisma Studio (database GUI)
 npx prisma studio
 
@@ -82,7 +91,7 @@ cd backend
 npx prisma studio
 ```
 
-Then open http://localhost:5555 to see your database tables.
+Then open http://localhost:49152 to see your database tables.
 
 ## 🛑 Troubleshooting
 
@@ -98,9 +107,3 @@ Then open http://localhost:5555 to see your database tables.
 **Prisma client not found:**
 - Run: `npx prisma generate`
 - Restart your IDE/terminal
-
-## 🎓 Next Steps
-
-You're ready for **Phase 1 - Product Catalog!**
-
-See PROJECT.md for the next features to implement.
