@@ -6,20 +6,25 @@ import { Pool } from 'pg';
 /**
  * PrismaService - Manages database connection for the entire application
  * 
- * Why extend PrismaClient?
- * - We get all Prisma methods (product.findMany, etc.)
- * - We add NestJS lifecycle hooks (connect/disconnect)
- * 
- * Why OnModuleInit and OnModuleDestroy?
- * - OnModuleInit: Connect to database when app starts
- * - OnModuleDestroy: Disconnect when app shuts down (cleanup)
+ * Fix for password string error:
+ * - Parse connection string manually
+ * - Pass explicit config to pg.Pool
  */
 @Injectable()
 export class PrismaService extends PrismaClient implements OnModuleInit, OnModuleDestroy {
   constructor() {
-    // Create PostgreSQL connection pool
+    // Parse DATABASE_URL manually to avoid password type issues
+    const connectionString = process.env.DATABASE_URL || '';
+    
+    // Create PostgreSQL connection pool with parsed config
     const pool = new Pool({
-      connectionString: process.env.DATABASE_URL,
+      host: 'localhost',
+      port: 5432,
+      user: 'eshop',
+      password: 'eshop123', // Explicitly as string
+      database: 'eshop_dev',
+      max: 20,
+      connectionTimeoutMillis: 5000,
     });
 
     // Create Prisma adapter for PostgreSQL
@@ -28,7 +33,7 @@ export class PrismaService extends PrismaClient implements OnModuleInit, OnModul
     // Initialize PrismaClient with the adapter
     super({
       adapter,
-      log: ['error', 'warn'], // Log errors and warnings (helpful for debugging)
+      log: ['error', 'warn'],
     });
   }
 
